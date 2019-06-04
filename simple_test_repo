@@ -1,0 +1,7 @@
+!#bin/bash
+cd /srv/src/simple_test_repo
+git pull
+rsync -r./var/www/html exclude. git
+/srv/src/scripts/pull_website.sh
+
+/srv/src/scripts/deploy_website.sh
