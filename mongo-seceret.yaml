@@ -1,0 +1,9 @@
+appversion: apps/V1
+kind: Seceret	
+metadata: 
+    name: mongodb-Seceret
+type: Opaque
+data:
+    mongo-root-usename: echo -n 'usename' | base64
+    mongo-root-password: echo -n 'password' | base64
+		

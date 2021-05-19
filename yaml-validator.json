@@ -1,0 +1,41 @@
+appVersion: aaps/V1
+kind: Deployment
+metadata:
+    name: nginx-deployment
+    lable: ngnix 
+    port: 9001
+    volumnMountpath: /user/nginx/html/
+    
+specification:
+    replicas: 2
+    selectors:
+    templates:
+     metadata:
+        lables:
+        app: nginx
+    specifications:
+    -   name: nginx
+        image: nginx:1.16
+        ports:
+            containerports: 8080
+            
+        kubectl commands
+        
+        kubectl apply -f nginx-deployment.yaml
+        deployment yaml file is created
+        kubectl apply -f nginx-service.yaml
+        service yaml file is created
+        kubectl get pod 
+        we can see how many replicas are  running
+        kubectl get service
+        we can see how many services are running 
+        kubectl describe service nginx-serivce
+        service information in detail 
+        kubectl get pod -o wide
+        to get the more  information about IP's
+        
+        
+        
+        
+    
+    
